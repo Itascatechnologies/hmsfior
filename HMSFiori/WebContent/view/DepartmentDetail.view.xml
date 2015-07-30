@@ -1,0 +1,20 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+		controllerName="test.my.fiori.view.DepartmentDetail" xmlns:html="http://www.w3.org/1999/xhtml"
+
+		>
+	<Page title="{i18n>departmentDetailPageTitle}" id="idDetailPage"  showHeader="{device&gt;/isPhone}"  showNavButton="{device&gt;/isPhone}" navButtonPress="navBackToMaster">
+
+ <footer>
+      <Bar>
+        <contentRight>
+           <Button id="delete" text="Delete" press="handleDeletePress" />
+          <Button id="edit" text="Edit" press="handleEditPress" />
+          <Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress" />
+          <Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />
+        </contentRight>
+      </Bar>
+    </footer>
+  <customData><core:CustomData key="sapDtResourcePath" value="Departments"/></customData></Page>
+</core:View>

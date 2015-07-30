@@ -1,0 +1,49 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+		controllerName="test.my.fiori.view.NewTestRegDetail" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="idDetailPage" title="Hospital Managment System Test Registration Screen" showNavButton="true" navButtonPress="navBackToMenuRederer">
+		
+		<content>
+		<l:Grid
+    defaultSpan="L12 M12 S12"
+    width="auto">
+    <l:content>
+      <f:SimpleForm
+        minWidth="1024"
+        maxContainerCols="2"
+        editable="true"
+        layout="ResponsiveGridLayout"
+        title="Patient Registration Information"
+        labelSpanL="3"
+        labelSpanM="3"
+        emptySpanL="4"
+        emptySpanM="4"
+        columnsL="1"
+        columnsM="1"
+        class="editableForm">
+         <Label text="Patient Reginstration No" />
+         <Text text="{Id}" class="regFormText"/>
+         <Label text="Patient Name" />
+         <Text text="{PatientName}" class="regFormText" />
+          <Label text="Patient Category" />
+         <Text text="{NamePatientCategory}"  class="regFormText"/>
+         
+         
+      </f:SimpleForm>
+        <Label text="Department" labelFor="idSelectDepartment"/>
+           <Select
+            id="idSelectDepartment"
+            selectedKey=""
+             items="{/Departments}">
+            <items>
+              <core:Item key="{Id}" text="{Name}" />
+            </items>
+           
+          </Select>
+    </l:content>
+  </l:Grid>
+  
+		</content>
+	</Page>
+</core:View>

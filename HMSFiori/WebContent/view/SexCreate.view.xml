@@ -1,0 +1,45 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+ xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+		controllerName="test.my.fiori.view.SexCreate" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title" id="idCreatePage"  showHeader="{device&gt;/isPhone}"  showNavButton="{device&gt;/isPhone}" navButtonPress="navToEmptyViewForWindowCase">
+		<content>
+	<l:Grid
+    defaultSpan="L12 M12 S12"
+    width="auto">
+    <l:content>
+      <f:SimpleForm 
+        minWidth="1024"
+        maxContainerCols="2"
+        editable="true"
+        layout="ResponsiveGridLayout"
+        title="New Sex Information"
+        labelSpanL="3"
+        labelSpanM="3"
+        emptySpanL="4"
+        emptySpanM="4"
+        columnsL="1"
+        columnsM="1"
+        class="editableForm">
+        <f:content>
+          <Label text="Name" />
+          <Input value="" id="idName"/>
+          <Label text="Description" />
+          <Input value="" id="idDescription">
+          </Input>
+
+        </f:content>
+      </f:SimpleForm>
+    </l:content>
+  </l:Grid>
+		</content>
+		<footer>
+      <Bar>
+        <contentRight>
+         <Button text="Save" type="Emphasized" press="handleSaveButtonPress" />
+          
+        </contentRight>
+      </Bar>
+    </footer>
+	</Page>
+</core:View>

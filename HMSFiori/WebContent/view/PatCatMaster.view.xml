@@ -1,0 +1,36 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+xmlns:footerbar="sap.ushell.ui.footerbar"
+		controllerName="test.my.fiori.view.PatCatMaster" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>patientCategoryMasterTitle}" id="idMasterPage" class="myMasterPage"  showHeader="{device&gt;/isPhone}"  showNavButton="{device&gt;/isPhone}" navButtonPress="navBackToMenuRederer">
+		 <subHeader id="masterSubHeader">
+            <Bar id="searchBar">
+                <contentMiddle>
+                    <SearchField id="searchField" search="onSearch" width="100%" placeholder="{i18n&gt;masterSearchPlaceholder}" showRefreshButton="{device&gt;/isNoTouch}" tooltip="{i18n&gt;masterSearchTooltip}">
+                    </SearchField>
+                </contentMiddle>
+                <contentRight>
+                 <Button tooltip="Create" icon="sap-icon://add" press="handleAddNewRecord"/>
+                </contentRight>
+            </Bar>
+        </subHeader>
+        <content>
+            <List id="list" select="onSelect" mode="{device&gt;/listMode}" noDataText="{i18n&gt;masterListNoDataText}" growing="true" growingScrollToLoad="true" items="{/PatientCategoryMasters}">
+                <customData id="customData1">
+                    <core:CustomData id="coreCustomData1" key="sapDtResourcePath" value="SubMenus">
+                    </core:CustomData>
+                </customData>
+                <items id="masterList">
+                    <ObjectListItem id="mainListItem" press="onSelect" type="{device&gt;/listItemType}" counter="0" title="{Name}" number="{Id}" numberUnit="" markFavorite="false" markFlagged="false" showMarkers="false">
+                        <customData id="customData2">
+                            <core:CustomData id="coreCustomData2" key="sapDtResourcePath" value="PatientCategoryMasters">
+                            </core:CustomData>
+                        </customData>
+                        <core:ExtensionPoint name="extListItemInfo"/>
+                    </ObjectListItem>
+                </items>
+            </List>
+        </content>
+      
+	</Page>
+	
+</core:View>

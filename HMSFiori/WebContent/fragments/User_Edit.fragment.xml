@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:core="sap.ui.core">
+  	<l:Grid
+    defaultSpan="L12 M12 S12"
+    width="auto">
+    <l:content>
+      <f:SimpleForm
+        minWidth="1024"
+        maxContainerCols="2"
+        editable="true"
+        layout="ResponsiveGridLayout"
+        title="Selected Registration Fee Information"
+        labelSpanL="3"
+        labelSpanM="3"
+        emptySpanL="4"
+        emptySpanM="4"
+        columnsL="1"
+        columnsM="1"
+        class="editableForm">
+        <f:content>
+          <Label text="User Id" />
+          <Input value="{UserId}" id="idUserId"/>
+          <Label text="Description" />
+          <Input value="{Description}" id="idDescription">
+          </Input>
+		    <Label text="Select Role" labelFor="idSelectRole"/>
+           <Select
+            id="idSelectRole"
+            selectedKey="{Role}"
+            change="handleSelectChange">
+            <items>
+              <core:Item key="User" text="User" />
+              <core:Item key="Administrator" text="Administrator" />
+               <core:Item key="OPD" text="OPD" />
+                <core:Item key="Test" text="Test" />
+            </items>
+          </Select>
+
+        </f:content>
+      </f:SimpleForm>
+
+    </l:content>
+  </l:Grid>
+</core:FragmentDefinition>

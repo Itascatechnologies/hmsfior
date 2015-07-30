@@ -1,0 +1,16 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+		controllerName="test.my.fiori.view.NewRegDetail" xmlns:html="http://www.w3.org/1999/xhtml"
+		>
+	<Page title="{i18n>departmentDetailPageTitle}" id="idDetailPage"  showHeader="{device&gt;/isPhone}"  showNavButton="{device&gt;/isPhone}" navButtonPress="navBackToMaster">
+
+ <footer>
+      <Bar>
+        <contentRight>
+          <Button id="save" text="Print" type="Emphasized"  press="handlePrintPress" />
+        </contentRight>
+      </Bar>
+    </footer>
+  <customData><core:CustomData key="sapDtResourcePath" value="Registrations"/></customData></Page>
+</core:View>

@@ -1,0 +1,17 @@
+<core:FragmentDefinition
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<Dialog
+		title="{i18n>confirmationDialogTitle}"
+		type="Message">
+		<content>
+			<Text text="{i18n>confirmtionDialogText}" />
+		</content>
+		<buttons>
+			<Button  text="{i18n>confirmDialogButtonDeleted}" press="onDialogDeleted" />
+			<Button text="{i18n>confirmDialogButtonConfirmed}" press="onDialogConfirmed" />
+			<Button  text="{i18n>confirmDialogButtonClosed}" press="onDialogClosed" />
+			
+		</buttons>
+	</Dialog>
+</core:FragmentDefinition>

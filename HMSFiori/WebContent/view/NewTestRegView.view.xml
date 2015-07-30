@@ -1,0 +1,70 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+		controllerName="test.my.fiori.view.NewTestRegView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page id="idDetailPage" title="Hospital Managment System Renew Registration Screen" showNavButton="true" navButtonPress="navBackToMenuRederer">
+		<subHeader id="masterSubHeader">
+            <Bar id="searchBar">
+                <contentMiddle>
+                    <SearchField id="searchField" search="onSearch" width="100%" placeholder="Enter Registration No" showRefreshButton="{device&gt;/isNoTouch}" tooltip="{i18n&gt;}">
+                    </SearchField>
+                </contentMiddle>
+            </Bar>
+        </subHeader>
+		
+		<content>
+			<l:Grid
+    			defaultSpan="L12 M12 S12"
+    			width="auto" id="addTestGrid">
+    			<l:content>
+      
+      
+    			</l:content>
+  		</l:Grid>
+  		 <Table id="idProductsTable"
+    inset="false"
+    items="{
+      path: '/TestListItem',
+      sorter: {
+        path: 'Name'
+      }
+    }">
+    <headerToolbar>
+      <Toolbar>
+        <Title text="Test List" level="H2"/>
+      </Toolbar>
+    </headerToolbar>
+    <columns>
+      <Column
+        width="12em">
+        <Text text="Department Name" />
+      </Column>
+      <Column
+        minScreenWidth="Tablet"
+        demandPopin="true">
+        <Text text="Test Name" />
+      </Column>
+     
+      <Column
+        hAlign="Right">
+        <Text text="Test Price" />
+      </Column>
+    </columns>
+    <items>
+      <ColumnListItem>
+        <cells>
+          <ObjectIdentifier
+            text="{Id}"/>
+          <Text
+            text="{Name}" />
+          
+          <ObjectNumber
+          number="{Price}"
+          unit="{CurrencyCode}" />
+        </cells>
+      </ColumnListItem>
+    </items>
+  </Table>
+		</content>
+	</Page>
+</core:View>

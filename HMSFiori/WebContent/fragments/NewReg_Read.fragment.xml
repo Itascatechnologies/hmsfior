@@ -1,0 +1,52 @@
+<core:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:core="sap.ui.core">
+  	<l:Grid
+    defaultSpan="L12 M12 S12"
+    width="auto">
+    <l:content>
+      <f:SimpleForm 
+        minWidth="1024"
+        maxContainerCols="2"
+        layout="ResponsiveGridLayout"
+        title="Selected Patient Information"
+        labelSpanL="3"
+        labelSpanM="3"
+        emptySpanL="4"
+        emptySpanM="4"
+        columnsL="1"
+        columnsM="1"
+        >
+         <Label text="Patient Reginstration No" class="frmLabel" />
+         <Text text="{Id}" class="frmText" />
+          <Label text="Registration Date" class="frmLabel" />
+         <Text text="{CreatedOn}" class="frmText" />
+         <Label text="Registration Fee" class="frmLabel" />
+         <Text text="{Price}" class="frmLabel" />
+         <Label text="Patient Name" class="frmLabel" />
+         <Text text="{PatientName}" class="frmText" />
+         <Label text="Patient Gender" class="frmLabel" />
+         <Text text="{NameSex}" class="frmText" />
+         <Label text="Patient Age" class="frmLabel" />
+         <Text text="{PatientAgeIn}" class="frmText" />
+          <Label text="Patient Father's Name" class="frmLabel" />
+          <Text text="{PatientFathersName}" class="frmText" />
+          
+          <Label text="Patient Category" class="frmLabel" />
+         <Text text="{NamePatientCategory}" class="frmText" />
+          <Label text="Department" class="frmLabel" />
+         <Text text="{NameDepartment}" class="frmText"/>
+         
+           <Label text="Created By" class="frmLabel" />
+          <Text text="{CreatedBy}" class="frmText" />
+           <Label text="Created On" class="frmLabel" />
+          <Text text="{CreatedOn}" class="frmText" />
+          <Label></Label>
+         
+      </f:SimpleForm>
+      
+    </l:content>
+  </l:Grid>
+</core:FragmentDefinition>

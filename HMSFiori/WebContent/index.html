@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>Hospital Managment System</title>
+
+		<script id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m,sap.ui.unified""
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{"test.my.fiori": "./"}'>
+		</script>
+        <script type="text/javascript" src="FragmentFactory.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<script>
+			sap.ui.getCore().attachInit(function() {
+				new sap.m.Shell({
+					app: new sap.ui.core.ComponentContainer({
+						height : "100%",
+						name : "test.my.fiori"
+					})
+				}).placeAt("content");
+			});
+		</script>
+		<style type="text/css">
+	
+		.myMenuPage .sapMIBar-CTX .sapMTitle {
+  color: #0C0546;
+  text-shadow: none;
+  
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.mainPage .sapMIBar-CTX .sapMTitle {
+  color: #0C0546;
+  text-shadow: none;
+  
+  font-family: sans-serif;
+  font-size: 20px;
+}
+.myBar{
+ width: 97.6%;
+  margin-bottom: 4%;
+  margin-left: 1.2%;
+    background-color: rgba(54,62,67,0.96);
+}
+.lblRegistrationFeeAmount{
+ color:red;
+ font-style: italic;
+}
+.building{
+  margin-top:1.5%;
+  margin-left:1%;
+}
+.regFormText{
+font-weight: bold;
+  color: rgb(123, 18, 4);
+  font-size: 14px;
+}
+.frmLabel{
+	 margin-bottom:3%;
+}
+.frmText{
+   margin-bottom:3%;
+}
+.frmSelLabel{
+  padding-top: 15px;
+   margin-bottom:3%;
+}
+.frmSelect{
+	margin-bottom:3%;
+}
+	.myDetailPage{
+		 height:85.5%;
+		 width:99%;
+		 margin-left:0.5%;
+		}
+		.m-myDetailPage{
+			 height:92.5%;
+		     width:99%;
+		     margin-left:0.5%;
+		}
+		.myRegistraionPage{
+		 height: 98%;
+		 width:99%;
+		 margin-left:0.5%;
+		}
+		.myMasterPage {
+  			height: 85%;
+  			position: relative;
+		}
+		.m-myMasterPage {
+ 			height: 92%;
+  			position: relative;
+		}
+		</style>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
+
+</html>

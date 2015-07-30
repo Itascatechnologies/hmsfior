@@ -1,0 +1,13 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="test.my.fiori.view.TestView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page class="mainPage"  title="{i18n>testMainPageTitle}" showHeader="{device&gt;/isNoPhone}" showNavButton="true" navButtonPress="navBackToMenuRederer">
+		<SplitApp id="idSplitApp" >
+			<masterPages>
+		
+			</masterPages>
+			<detailPages>
+			 
+			</detailPages>
+			</SplitApp>	
+	</Page>
+</core:View>

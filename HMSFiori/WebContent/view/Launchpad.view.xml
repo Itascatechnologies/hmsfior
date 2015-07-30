@@ -1,0 +1,20 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+displayBlock="true"
+		controllerName="test.my.fiori.view.Launchpad" xmlns:html="http://www.w3.org/1999/xhtml" id="app-launchpad">
+ 	<Page enableScrolling ="false" showHeader="false" class="marginBoxContent" height="90%" width="90%">
+ 	  <content>
+ 	     <TileContainer id="tilesContainer" height="100%" width="100%"
+				tiles="{/Menus}"> 
+				<StandardTile xmlns="sap.m"  icon="sap-icon://{icon}" type="{type}"
+					number="{Number}" numberUnit="{NumberUnit}" title="{Title}" info="{Info}"
+					infoState="{infoState}" 
+					press="handleTilePress"
+					/>
+		</TileContainer>
+
+ 	  </content>
+ 	</Page>	
+	
+		
+
+</core:View>

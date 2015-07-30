@@ -1,0 +1,114 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:f="sap.ui.layout.form"
+  id="create"
+		controllerName="test.my.fiori.view.NewRegCreate" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title"  id="idCreatePage"  showHeader="{device&gt;/isPhone}"  showNavButton="{device&gt;/isPhone}" navButtonPress="navToEmptyViewForWindowCase">
+		<content>
+		
+		<l:Grid 
+    defaultSpan="L12 M12 S12"
+    width="auto">
+    <l:content>
+      <f:SimpleForm id="Sex"
+        minWidth="1024"
+        maxContainerCols="2"
+        editable="true"
+        layout="ResponsiveGridLayout"
+        title="Patient Registration Form"
+        labelSpanL="3"
+        labelSpanM="3"
+        emptySpanL="4"
+        emptySpanM="4"
+        columnsL="1"
+        columnsM="1"
+        class="editableForm">
+        <f:content>
+        
+        
+          <Label text="Patient Category Type" labelFor="idSelectCategory"/>
+
+<!-- 			     <RadioButtonGroup id ="idChoiceCategory" columns="3"  buttons="{/PatientCategoryMasters}" class="sapUiMediumMarginBottom" >    -->
+<!--  <RadioButton text="{Name}" key="{Id}" tooltip="{Description}"/>    -->
+<!--  </RadioButtonGroup>    -->
+          
+           <Select
+            id="idSelectCategory"
+            selectedKey=""
+            change="handleSelectChangePatientCategory" items="{/RegistrationFeeMasters}">
+            <items>
+              <core:Item key="{IdPatientCategory}" text="{NamePatientCategory}" />
+            </items>
+           
+           </Select>
+		<Label text="Registration Fee Amount" />
+          <Text id="idRegFeeAmountText" text="" class="lblRegistrationFeeAmount"/>
+          
+          <Label text="Patient Name" />
+          <Input id="idPatientName" value="" required= "true"></Input>
+          
+          <Label  text="Patient Father's Name" />
+          <Input id="idPatientFathersName" value="" required= "true"></Input>
+          
+      		<Label text="Patient Age" />
+            <Input id="idPatientAge" value="" required= "true">
+            </Input>
+          <Label text="Patient Age In" />
+           <Select
+            id="idSelectAgeIn"
+            selectedKey="year">
+            <items>
+              <core:Item key="day" text="In Days" />
+              <core:Item key="week" text="In Weeks" />
+               <core:Item key="month" text="In Months" />
+                <core:Item key="year" text="In Years" />
+            </items>
+            
+          </Select>
+           
+             <Label text="Patient Gender" labelFor="idSelectGender"/>
+           <Select
+            id="idSelectGender"
+            selectedKey=""
+             items="{/Sexs}">
+            <items>
+              <core:Item key="{Id}" text="{Name}" />
+            </items>
+           
+          </Select>
+             <Label text="Department" labelFor="idSelectDepartment"/>
+           <Select
+            id="idSelectDepartment"
+            selectedKey=""
+             items="{/Departments}">
+            <items>
+              <core:Item key="{Id}" text="{Name}" />
+            </items>
+           
+          </Select>
+          <Label text="Patient Contact No" />
+            <Input id="idPatientContactNo" value="" />
+            
+             <Label text="Patient Address" />
+             <TextArea id="idPatientAddress" value="" rows="2" cols="10"/>
+               <Label  text="" />
+             <Bar class="myBar">
+        <contentRight >
+         <Button text="Save" type="Emphasized" press="handleSaveButtonPress" />
+           <Button text="Cancel" press="handleCancelButtonPress" />
+        </contentRight>
+      </Bar>
+      
+        </f:content>
+      </f:SimpleForm>
+    </l:content>
+  </l:Grid>
+  	
+  
+<!--   <customData><core:CustomData key="sapDtResourcePath" value=""/></customData> -->
+  
+		
+		</content>
+	
+	</Page>
+</core:View>

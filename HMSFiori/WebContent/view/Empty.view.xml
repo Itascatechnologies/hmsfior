@@ -1,0 +1,13 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="test.my.fiori.view.Empty" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>emptyPageTitle}">
+		<content>
+			 <Image class="building"
+          src="images/building.jpg"
+          densityAware="false"
+          width="98%" height="80%" >
+         
+        </Image>
+		</content>
+	</Page>
+</core:View>

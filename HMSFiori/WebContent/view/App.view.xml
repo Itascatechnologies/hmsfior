@@ -1,0 +1,41 @@
+<mvc:View controllerName="test.my.fiori.view.App" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:unified="sap.ui.unified">
+
+	<unified:Shell title="Amit Appliation" height="100%" width="100%">
+		<unified:headItems>
+			<unified:ShellHeadItem tooltip="Configuration"
+				icon="sap-icon://home" press="handlePressConfiguration" />
+			<unified:ShellHeadItem tooltip="Home"
+				icon="sap-icon://logo" visible="false" press="handlePressHome" />
+		</unified:headItems>
+		
+		<unified:user>
+			<unified:ShellHeadUserItem image="sap-icon://person-placeholder"
+				username="Administrator " press="handleUserItemPressed" />
+		</unified:user>
+		<Page showHeader="false">
+		    <Shell title="My Application" class="mysapMShell"
+			logo="http://sap.github.io/openui5/images/icotxt_white_220x72_blue_open.png">
+			<App id="idAppControl">
+
+			</App>
+
+
+		</Shell>
+		<footer>
+		<Toolbar>
+		<ToolbarSpacer />
+		<Button text="Terms of use" />
+		<Button text="Copyright" />
+		<Button text="Trademarks" />
+		<Button text="SAP.com" />
+		<Button text="Legal Disclosure" />
+		<Button text="Privacy" />
+		</Toolbar>
+		</footer>
+		</Page>
+	
+
+	</unified:Shell>
+
+</mvc:View>
